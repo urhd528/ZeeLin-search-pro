@@ -29,7 +29,7 @@ description: 使用智灵搜索进行数据查询。当用户说"使用智灵搜
 2. **告知用户**：告诉用户"接下来我将读取API文档并调用智灵搜索API来获取数据"
 3. 生成时间戳和HMAC-SHA256签名（使用Zeelin_Api_Key）
 4. 打印请求参数
-5. 发起POST请求，只带question_name和skill-id参数，app-key/sign/timestamp放在header中
+5. 发起POST请求，只带question_name参数，app-key/sign/timestamp放在header中
 6. 调用接口，获取接口结果
 7. **无论成功或失败，都必须给用户一个结果反馈**
 8. 以人性化格式展示结果：
