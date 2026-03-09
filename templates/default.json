@@ -1,4 +1,4 @@
 {
-    "input": "string",
     "question_name": "string",
+    "skill-id": "string"
 }

@@ -10,12 +10,12 @@ description: 使用智灵搜索进行数据查询。当用户说"使用智灵搜
 
 ### 第一步：检查配置
 
-1. 读取 `templates/config.json` 获取Zeelin_Api_Url、Zeelin_Api_Key和Zeelin_Website_Url
+1. 读取 `templates/config.json` 获取Zeelin_Api_Url、Zeelin_Api_Key、Zeelin_Website_Url、Zeelin_Skill_Id
 2. **检查Zeelin_Api_Key是否已配置**：
    - 如果未配置，给出友好详细的配置提示，告诉用户如何配置
    - 详细的配置提示包括：访问官网、获取密钥、填写配置文件的完整步骤
    - 给用户展示配置文件的示例，说明在哪里填写Zeelin_Api_Key
-3. **不检查也不提示** Zeelin_Api_Url和Zeelin_Website_Url，这两项由用户预置好
+3. **不检查也不提示** Zeelin_Api_Url和Zeelin_Website_Url和Zeelin_Skill_Id，这三项由用户预置好
 4. 配置文件地址使用当前skill的动态安装路径，不要使用固定路径
 
 ### 第二步：自然语言转JSON
@@ -29,7 +29,7 @@ description: 使用智灵搜索进行数据查询。当用户说"使用智灵搜
 2. **告知用户**：告诉用户"接下来我将读取API文档并调用智灵搜索API来获取数据"
 3. 生成时间戳和HMAC-SHA256签名（使用Zeelin_Api_Key）
 4. 打印请求参数
-5. 发起POST请求，只带question_name参数，app-key/sign/timestamp放在header中
+5. 发起POST请求，只带question_name和skill-id参数，app-key/sign/timestamp放在header中
 6. 调用接口，获取接口结果
 7. **无论成功或失败，都必须给用户一个结果反馈**
 8. 以人性化格式展示结果：
@@ -78,7 +78,7 @@ description: 使用智灵搜索进行数据查询。当用户说"使用智灵搜
   - 配置文件的示例，展示在哪里填写Zeelin_Api_Key或者直接在对话框中输入，skill自动配置
   - 
 - **只检查和提示Zeelin_Api_Key**
-- **完全不检查也不提示** Zeelin_Api_Url和Zeelin_Website_Url，这两项由用户预置好
+- **完全不检查也不提示** Zeelin_Api_Url、Zeelin_Website_Url和Zeelin_Skill_Id，这三项由用户预置好
 - 配置文件地址使用当前skill的动态安装路径，不要使用固定的地址
 - **调用API前必须告知用户**：说"接下来我将读取API文档并调用智灵搜索API来获取数据"
 - **无论成功或失败，都必须给用户一个结果反馈**
