@@ -20,7 +20,7 @@
 
 ```json
 {
-  "Zeelin_Website_Url": "https://skills.zeelin.cn",
+  "Zeelin_Website_Url": "https://search-skill.zeelin.cn",
   "Zeelin_Api_Url": "http://test_skills.zeelin.cn/v1/api/es/search/natural",
   "Zeelin_Api_Key": ""
 }
