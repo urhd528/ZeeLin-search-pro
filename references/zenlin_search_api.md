@@ -72,7 +72,7 @@ sign = HMAC-SHA256(Zeelin_Api_Key, Zeelin_Api_Key + timestamp)
      - `app-key: ${Zeelin_Api_Key}`
      - `sign: ${sign}`
      - `timestamp: ${timestamp}`
-   - Body：包含 `question_name`和`skill-id` 字段
+   - Body：包含 `question_name`和`skill_id` 字段
    - 使用UTF-8编码确保中文能正确传输
 9. **发送请求**：调用智灵搜索自然语言API
 10. **处理响应**：
@@ -102,7 +102,7 @@ timestamp: ${timestamp}
 
 {
   "question_name": "自然语言查询描述",
-  "skill-id": "${Zeelin_Skill_Id}"
+  "skill_id": "${Zeelin_Skill_Id}"
 }
 ```
 
@@ -114,7 +114,7 @@ timestamp: ${timestamp}
 | 参数            | 类型   | 必填 | 说明             | 示例                                       |
 | --------------- | ------ | ---- | ---------------- | ------------------------------------------ |
 | `question_name` | String | 是   | 自然语言查询描述 | "帮我查询吉利汽车在百度贴吧最近两天的数据" |
-| `skill-id`     | String | 是   | 技能ID            | "zeelin_78iJ2UNe7sadlV1MdxgX4QljE"       |
+| `skill_id`     | String | 是   | 技能ID            | "zeelin_78iJ2UNe7sadlV1MdxgX4QljE"       |
 
 
 ## API响应格式
